@@ -70,3 +70,62 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )
 };
 
+// Change default layer according to detected OS
+bool process_detected_host_os_kb(os_variant_t detected_os) {
+    if (!process_detected_host_os_user(detected_os)) {
+        return false;
+    }
+
+    switch (detected_os) {
+        case OS_WINDOWS:
+        case OS_LINUX:
+            set_single_default_layer(WIN);
+            break;
+        default:
+            set_single_default_layer(MAC);
+    }
+
+    return true;
+}
+
+// Hotkeys
+
+// ALT/GUI + B = Previous track
+const key_override_t prev_track_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_B, KC_MPRV, 1 << WIN);
+const key_override_t prev_track_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_B, KC_MPRV, 1 << MAC);
+// ALT/GUI + N = Next track
+const key_override_t next_track_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_N, KC_MNXT, 1 << WIN);
+const key_override_t next_track_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_N, KC_MNXT, 1 << MAC);
+// ALT/GUI + M = Play/Pause
+const key_override_t play_pause_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_M, KC_MPLY, 1 << WIN);
+const key_override_t play_pause_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_M, KC_MPLY, 1 << MAC);
+// ALT/GUI + H = Home
+const key_override_t home_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_H, KC_HOME, 1 << WIN);
+const key_override_t home_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_H, KC_HOME, 1 << MAC);
+// ALT/GUI + J = Page down
+const key_override_t pgdown_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_J, KC_PGDN, 1 << WIN);
+const key_override_t pgdown_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_J, KC_PGDN, 1 << MAC);
+// ALT/GUI + K = Page up
+const key_override_t pgup_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_K, KC_PGUP, 1 << WIN);
+const key_override_t pgup_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_K, KC_PGUP, 1 << MAC);
+// ALT/GUI + L = End
+const key_override_t end_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_L, KC_END, 1 << WIN);
+const key_override_t end_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_L, KC_END, 1 << MAC);
+
+const key_override_t *key_overrides[] = {
+    &prev_track_override_alt,
+    &prev_track_override_gui,
+    &next_track_override_alt,
+    &next_track_override_gui,
+    &play_pause_override_alt,
+    &play_pause_override_gui,
+    &home_override_alt,
+    &home_override_gui,
+    &pgdown_override_alt,
+    &pgdown_override_gui,
+    &pgup_override_alt,
+    &pgup_override_gui,
+    &end_override_alt,
+    &end_override_gui
+};
+
