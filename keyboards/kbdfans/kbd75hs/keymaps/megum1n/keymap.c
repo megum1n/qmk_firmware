@@ -91,26 +91,26 @@ bool process_detected_host_os_kb(os_variant_t detected_os) {
 // Hotkeys
 
 // ALT/GUI + B = Previous track
-const key_override_t prev_track_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_B, KC_MPRV, 1 << WIN);
-const key_override_t prev_track_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_B, KC_MPRV, 1 << MAC);
+const key_override_t prev_track_override_alt = ko_make_with_layers_and_negmods(MOD_BIT(KC_LALT), KC_B, KC_MPRV, 1 << WIN, MOD_MASK_SHIFT);
+const key_override_t prev_track_override_gui = ko_make_with_layers_and_negmods(MOD_BIT(KC_LGUI), KC_B, KC_MPRV, 1 << MAC, MOD_MASK_SHIFT);
 // ALT/GUI + N = Next track
-const key_override_t next_track_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_N, KC_MNXT, 1 << WIN);
-const key_override_t next_track_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_N, KC_MNXT, 1 << MAC);
+const key_override_t next_track_override_alt = ko_make_with_layers_and_negmods(MOD_BIT(KC_LALT), KC_N, KC_MNXT, 1 << WIN, MOD_MASK_SHIFT);
+const key_override_t next_track_override_gui = ko_make_with_layers_and_negmods(MOD_BIT(KC_LGUI), KC_N, KC_MNXT, 1 << MAC, MOD_MASK_SHIFT);
 // ALT/GUI + M = Play/Pause
-const key_override_t play_pause_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_M, KC_MPLY, 1 << WIN);
-const key_override_t play_pause_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_M, KC_MPLY, 1 << MAC);
+const key_override_t play_pause_override_alt = ko_make_with_layers_and_negmods(MOD_BIT(KC_LALT), KC_M, KC_MPLY, 1 << WIN, MOD_MASK_SHIFT);
+const key_override_t play_pause_override_gui = ko_make_with_layers_and_negmods(MOD_BIT(KC_LGUI), KC_M, KC_MPLY, 1 << MAC, MOD_MASK_SHIFT);
 // ALT/GUI + H = Home
-const key_override_t home_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_H, KC_HOME, 1 << WIN);
-const key_override_t home_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_H, KC_HOME, 1 << MAC);
+const key_override_t home_override_alt = ko_make_with_layers_and_negmods(MOD_BIT(KC_LALT), KC_H, KC_HOME, 1 << WIN, MOD_MASK_SHIFT);
+const key_override_t home_override_gui = ko_make_with_layers_and_negmods(MOD_BIT(KC_LGUI), KC_H, KC_HOME, 1 << MAC, MOD_MASK_SHIFT);
 // ALT/GUI + J = Page down
-const key_override_t pgdown_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_J, KC_PGDN, 1 << WIN);
-const key_override_t pgdown_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_J, KC_PGDN, 1 << MAC);
+const key_override_t pgdown_override_alt = ko_make_with_layers_and_negmods(MOD_BIT(KC_LALT), KC_J, KC_PGDN, 1 << WIN, MOD_MASK_SHIFT);
+const key_override_t pgdown_override_gui = ko_make_with_layers_and_negmods(MOD_BIT(KC_LGUI), KC_J, KC_PGDN, 1 << MAC, MOD_MASK_SHIFT);
 // ALT/GUI + K = Page up
-const key_override_t pgup_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_K, KC_PGUP, 1 << WIN);
-const key_override_t pgup_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_K, KC_PGUP, 1 << MAC);
+const key_override_t pgup_override_alt = ko_make_with_layers_and_negmods(MOD_BIT(KC_LALT), KC_K, KC_PGUP, 1 << WIN, MOD_MASK_SHIFT);
+const key_override_t pgup_override_gui = ko_make_with_layers_and_negmods(MOD_BIT(KC_LGUI), KC_K, KC_PGUP, 1 << MAC, MOD_MASK_SHIFT);
 // ALT/GUI + L = End
-const key_override_t end_override_alt = ko_make_with_layers(MOD_BIT(KC_LALT), KC_L, KC_END, 1 << WIN);
-const key_override_t end_override_gui = ko_make_with_layers(MOD_BIT(KC_LGUI), KC_L, KC_END, 1 << MAC);
+const key_override_t end_override_alt = ko_make_with_layers_and_negmods(MOD_BIT(KC_LALT), KC_L, KC_END, 1 << WIN, MOD_MASK_SHIFT);
+const key_override_t end_override_gui = ko_make_with_layers_and_negmods(MOD_BIT(KC_LGUI), KC_L, KC_END, 1 << MAC, MOD_MASK_SHIFT);
 
 const key_override_t *key_overrides[] = {
     &prev_track_override_alt,
