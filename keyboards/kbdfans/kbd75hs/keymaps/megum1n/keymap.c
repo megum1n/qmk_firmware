@@ -69,23 +69,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LCTL , KC_LGUI , KC_LALT ,                         KC_SPC                          , MO(FN)  , QK_LEAD , MO(FN)  , KC_LEFT , KC_DOWN , KC_RGHT
 ),
 
-//    ┌─────┬─────────┬───────────┬─────────────┬─────┬─────┬──────┬─────────┬──────┬──────┬─────┬──────┬──────┬──────┬──────┬──────┐
-//    │     │ DF(MAC) │ DF(LINUX) │ DF(WINDOWS) │     │     │      │ QK_BOOT │      │      │     │ bRID │ bRIU │      │      │      │
-//    ├─────┼─────────┼───────────┼─────────────┼─────┼─────┼──────┼─────────┼──────┼──────┼─────┼──────┼──────┼──────┴──────┼──────┤
-//    │     │         │           │             │     │     │      │         │      │      │     │ vold │ volu │     del     │      │
-//    ├─────┼─────────┼───────────┼─────────────┼─────┼─────┼──────┼─────────┼──────┼──────┼─────┼──────┼──────┼─────────────┼──────┤
-//    │     │ MS_BTN1 │   MS_UP   │   MS_BTN2   │     │     │ home │  pgdn   │ pgup │ end  │     │      │      │             │ f17  │
-//    ├─────┼─────────┼───────────┼─────────────┼─────┼─────┼──────┼─────────┼──────┼──────┼─────┼──────┼──────┴─────────────┼──────┤
-//    │     │ MS_LEFT │  MS_DOWN  │   MS_RGHT   │     │     │ left │  down   │  up  │ rght │     │      │                    │      │
-//    ├─────┴─────────┼───────────┼─────────────┼─────┼─────┼──────┼─────────┼──────┼──────┼─────┼──────┼─────────────┬──────┼──────┤
-//    │               │           │             │     │     │ mprv │  mnxt   │      │      │     │      │             │      │      │
-//    ├─────┬─────────┼───────────┼─────────────┴─────┴─────┴──────┴─────────┴──────┴──────┼─────┼──────┼──────┬──────┼──────┼──────┤
-//    │     │         │  QK_LEAD  │                        QK_LEAD                         │     │      │      │ mprv │ mply │ mnxt │
-//    └─────┴─────────┴───────────┴────────────────────────────────────────────────────────┴─────┴──────┴──────┴──────┴──────┴──────┘
+//    ┌─────┬─────────┬───────────┬─────────────┬─────┬─────┬──────┬─────────┬──────┬──────┬─────┬──────┬──────┬─────────┬──────┬──────┐
+//    │     │ DF(MAC) │ DF(LINUX) │ DF(WINDOWS) │     │     │      │ QK_BOOT │      │      │     │ bRID │ bRIU │ UG_TOGG │      │      │
+//    ├─────┼─────────┼───────────┼─────────────┼─────┼─────┼──────┼─────────┼──────┼──────┼─────┼──────┼──────┼─────────┴──────┼──────┤
+//    │     │   f1    │    f2     │     f3      │ f4  │ f5  │  f6  │   f7    │  f8  │  f9  │ f10 │ f11  │ f12  │      del       │      │
+//    ├─────┼─────────┼───────────┼─────────────┼─────┼─────┼──────┼─────────┼──────┼──────┼─────┼──────┼──────┼────────────────┼──────┤
+//    │     │ MS_BTN1 │   MS_UP   │   MS_BTN2   │     │     │ home │  pgdn   │ pgup │ end  │     │ vold │ volu │                │ f17  │
+//    ├─────┼─────────┼───────────┼─────────────┼─────┼─────┼──────┼─────────┼──────┼──────┼─────┼──────┼──────┴────────────────┼──────┤
+//    │     │ MS_LEFT │  MS_DOWN  │   MS_RGHT   │     │     │ left │  down   │  up  │ rght │     │      │                       │      │
+//    ├─────┴─────────┼───────────┼─────────────┼─────┼─────┼──────┼─────────┼──────┼──────┼─────┼──────┼────────────────┬──────┼──────┤
+//    │               │           │             │     │     │ mprv │  mnxt   │      │      │     │      │                │      │      │
+//    ├─────┬─────────┼───────────┼─────────────┴─────┴─────┴──────┴─────────┴──────┴──────┼─────┼──────┼──────┬─────────┼──────┼──────┤
+//    │     │         │  QK_LEAD  │                        QK_LEAD                         │     │      │      │  mprv   │ mply │ mnxt │
+//    └─────┴─────────┴───────────┴────────────────────────────────────────────────────────┴─────┴──────┴──────┴─────────┴──────┴──────┘
 [FN] = LAYOUT_75_ansi(
-  _______ , DF(MAC) , DF(LINUX) , DF(WINDOWS) , _______ , _______ , _______ , QK_BOOT , _______ , _______ , _______ , KC_BRID , KC_BRIU , _______ , _______ , _______,
-  _______ , _______ , _______   , _______     , _______ , _______ , _______ , _______ , _______ , _______ , _______ , KC_VOLD , KC_VOLU ,      KC_DEL       , _______,
-  _______ , MS_BTN1 , MS_UP     , MS_BTN2     , _______ , _______ , KC_HOME , KC_PGDN , KC_PGUP , KC_END  , _______ , _______ , _______ ,      _______      , KC_F17 ,
+  _______ , DF(MAC) , DF(LINUX) , DF(WINDOWS) , _______ , _______ , _______ , QK_BOOT , _______ , _______ , _______ , KC_BRID , KC_BRIU , UG_TOGG , _______ , _______,
+  _______ , KC_F1   , KC_F2     , KC_F3       , KC_F4   , KC_F5   , KC_F6   , KC_F7   , KC_F8   , KC_F9   , KC_F10  , KC_F11  , KC_F12  ,      KC_DEL       , _______,
+  _______ , MS_BTN1 , MS_UP     , MS_BTN2     , _______ , _______ , KC_HOME , KC_PGDN , KC_PGUP , KC_END  , _______ , KC_VOLD , KC_VOLU ,      _______      , KC_F17 ,
   _______ , MS_LEFT , MS_DOWN   , MS_RGHT     , _______ , _______ , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , _______ , _______ ,           _______           , _______,
        _______      , _______   , _______     , _______ , _______ , KC_MPRV , KC_MNXT , _______ , _______ , _______ , _______ ,      _______      , _______ , _______,
   _______ , _______ , QK_LEAD   ,                                 QK_LEAD                                 , _______ , _______ , _______ , KC_MPRV , KC_MPLY , KC_MNXT
@@ -136,8 +136,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 )
 };
 
-bool linux_detected = false;
-int default_layer = MAC;
+bool mac_detected = false;
+int default_layer = LINUX;
 
 // Change default layer according to detected OS
 bool process_detected_host_os_kb(os_variant_t detected_os) {
@@ -145,11 +145,18 @@ bool process_detected_host_os_kb(os_variant_t detected_os) {
         return false;
     }
 
-    if (detected_os == OS_WINDOWS) {
-        default_layer = LINUX;
-    } else if (detected_os == OS_LINUX) {
-        linux_detected = true;
-        default_layer = LINUX;
+    switch (detected_os) {
+        case OS_MACOS:
+        case OS_IOS:
+            mac_detected = true;
+            default_layer = MAC;
+            break;
+        case OS_WINDOWS:
+            default_layer = WINDOWS;
+            break;
+        case OS_LINUX:
+        case OS_UNSURE:
+            break;
     }
 
     set_single_default_layer(default_layer);
@@ -157,15 +164,62 @@ bool process_detected_host_os_kb(os_variant_t detected_os) {
     return true;
 }
 
+// Backlight for layers
+const rgblight_segment_t PROGMEM mac_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, RGBLIGHT_LED_COUNT, HSV_PINK}
+);
+const rgblight_segment_t PROGMEM linux_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, RGBLIGHT_LED_COUNT, HSV_SPRINGGREEN}
+);
+const rgblight_segment_t PROGMEM windows_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, RGBLIGHT_LED_COUNT, HSV_ORANGE}
+);
+
+const rgblight_segment_t PROGMEM fn_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 3, HSV_PURPLE},
+    {13, 5, HSV_PURPLE}
+);
+const rgblight_segment_t PROGMEM fn_tab_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {2, 3, HSV_MAGENTA}
+);
+
+const rgblight_segment_t* const PROGMEM rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+    mac_layer,
+    linux_layer,
+    windows_layer,
+    fn_layer,
+    fn_tab_layer
+);
+
+void keyboard_post_init_user(void) {
+    rgblight_layers = rgb_layers;
+}
+
+layer_state_t default_layer_state_set_user(layer_state_t state) {
+    rgblight_set_layer_state(0, layer_state_cmp(state, MAC));
+    rgblight_set_layer_state(1, layer_state_cmp(state, LINUX));
+    rgblight_set_layer_state(2, layer_state_cmp(state, WINDOWS));
+
+    return state;
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    rgblight_set_layer_state(3, layer_state_cmp(state, FN));
+    rgblight_set_layer_state(4, layer_state_cmp(state, FN_TAB));
+
+    return state;
+}
+
 // Lead key
 void leader_end_user(void) {
-    // LEAD + A + S = GUI/ALT + S
-    if (leader_sequence_two_keys(KC_A, KC_S)) {
-        if (linux_detected) {
-            tap_code16(LSG(KC_S));
-        } else {
+    // LEAD + S + S = GUI/ALT + S
+    if (leader_sequence_two_keys(KC_S, KC_S)) {
+        if (mac_detected) {
             tap_code16(LSA(KC_S));
+        } else {
+            tap_code16(LSG(KC_S));
         }
+
         return;
     }
 }
