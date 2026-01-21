@@ -212,8 +212,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 // Lead key
 void leader_end_user(void) {
-    // LEAD + S + S = GUI/ALT + S
-    if (leader_sequence_two_keys(KC_S, KC_S)) {
+    // LEAD + A + S = GUI/ALT + S
+    if (leader_sequence_two_keys(KC_A, KC_S)) {
         if (mac_detected) {
             tap_code16(LSA(KC_S));
         } else {
